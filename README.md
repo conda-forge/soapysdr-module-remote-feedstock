@@ -5,9 +5,13 @@ Home: https://github.com/pothosware/SoapyRemote/wiki
 
 Package license: BSL-1.0
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/soapysdr-module-remote-feedstock/blob/master/LICENSE.txt)
 
 Summary: SoapySDR remote module, use any Soapy SDR remotely
+
+Development: https://github.com/pothosware/SoapyRemote
+
+Documentation: https://github.com/pothosware/SoapyRemote/wiki
 
 Use any SoapySDR supported device transparently over a local network link.
 The remote support feature can turn any SDR into a network peripheral.
