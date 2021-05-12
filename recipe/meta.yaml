@@ -18,7 +18,7 @@ requirements:
   build:
     - {{ compiler('cxx') }}
     - cmake
-    - ninja  # [win]
+    - ninja
   host:
     - soapysdr
 
