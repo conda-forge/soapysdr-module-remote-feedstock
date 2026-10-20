@@ -29,10 +29,20 @@ requirements:
 tests:
   - package_contents:
       strict: true
+      bin:
+        - SoapySDRServer
       files:
         - if: not win
-          then: lib/SoapySDR/modules${{ soapysdr }}/libremoteSupport.so
-          else: Library/lib/SoapySDR/modules${{ soapysdr }}/remoteSupport.dll
+          then:
+            - lib/SoapySDR/modules${{ soapysdr }}/libremoteSupport.so
+            - share/man/man1/SoapySDRServer.1
+          else:
+            - Library/lib/SoapySDR/modules${{ soapysdr }}/remoteSupport.dll
+            - Library/share/man/man1/SoapySDRServer.1
+        - if: linux
+          then:
+            - lib/sysctl.d/10-SoapySDRServer.conf
+            - lib/systemd/system/SoapySDRServer.service
   - script:
       - SoapySDRUtil --info
       - SoapySDRServer --help
